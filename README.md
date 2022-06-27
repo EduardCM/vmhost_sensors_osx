@@ -43,4 +43,4 @@ LAYOUT_TYPE = "v2"
 ```
 - You will need to update LOCAL_IP variable so it matches your system one.
 - The default API port (8004) is configured through vmhost_sensors_api.py, you can change it if needed, just remember to update the variable LOCAL_PORT in the plugin file. 
-- Currently there are 2 layouts/groupings available, one is [("v1")](./layout_v1.png), the other is by_adapter by_measurement_type [("v2")](./layout_v2.png). You can switch between them by editing the LAYOUT_TYPE variable in the plugin file.
+- Currently there are 2 layouts/groupings available, one is by_adapter [("v1")](./layout_v1.png), the other is by_measurement_type [("v2")](./layout_v2.png). You can switch between them by editing the LAYOUT_TYPE variable in the plugin file.
