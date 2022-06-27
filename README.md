@@ -2,9 +2,8 @@
 # The what and why
 When running OSX as a VM, there's no "nice" way of monitoring the host temps (mainly CPU), thus this project. It basically dumps the output of the linux `sensors` command to an API you can consume.
 
+![](https://i.imgur.com/Rx8zNeQ.png)  
 For my use, I decided to make a menubar applet using xbar, you can check it out here https://github.com/matryer/xbar if you're not already familiar with it. 
-![](https://i.imgur.com/Rx8zNeQ.png)
-
 
 ## Installation 
 1. Clone the repo
@@ -44,4 +43,4 @@ LAYOUT_TYPE = "v2"
 ```
 - You will need to update LOCAL_IP variable so it matches your system one.
 - The default API port (8004) is configured through vmhost_sensors_api.py, you can change it if needed, just remember to update the variable LOCAL_PORT in the plugin file. 
-- Currently there are 2 layouts/groupings available, one is by_measurement_type ("v2") the other is by_adapter ("v1"). You can switch between them by editing the LAYOUT_TYPE variable in the plugin file.
+- Currently there are 2 layouts/groupings available, one is [("v1")](./layout_v1.png), the other is by_adapter by_measurement_type [("v2")](./layout_v2.png). You can switch between them by editing the LAYOUT_TYPE variable in the plugin file.
