@@ -1,9 +1,17 @@
-# Installation 
+
+# The what and why
+When running OSX as a VM, there's no "nice" way of monitoring the host temps (mainly CPU), thus this project. It basically dumps the output of the linux `sensors` command to an API you can consume.
+
+For my use, I decided to make a menubar applet using xbar, you can check it out here https://github.com/matryer/xbar if you're not already familiar with it. 
+![](https://i.imgur.com/Rx8zNeQ.png)
+
+
+## Installation 
 1. Clone the repo
 2. Install the folowing packages:
 	> pip install fastapi  
 	> pip install "uvicorn[standard]"
-3. Add the xbar_vmhost_sensors_plugin to xbar. Check out https://github.com/matryer/xbar if you're not familiar already with xbar.
+3. Add the xbar_vmhost_sensors_plugin to xbar.
 4. Make vmhost_sensors_api.py run on startup. I use a systemctl service, as shown below.
 
 ### Run script on startup
@@ -26,7 +34,7 @@ WantedBy=multi-user.target
 3. Enable the service so it runs on startup `sudo systemctl enable vmtemp`
 4. Now run this command to start it `sudo systemctl start vmtemp`
 
-# Configuration
+## Configuration
 
 Inside the xbar plugin file you will find these variables.
 ```
